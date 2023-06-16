@@ -7,8 +7,8 @@
        01 I PIC 9(2) VALUE 1.
        01 MODEL_ID  PIC X(36) VALUE
                     '3442335c-c694-4e34-b7c9-af26e14cadd6'.
-       01 IN_CLASS  PIC X(08) VALUE 'SnapMLIN'.
-       01 OUT_CLASS PIC X(09) VALUE 'SnapMLOUT'.
+       01 IN_CLASS  PIC X(16) VALUE 'FraudMLINwrapper'.
+       01 OUT_CLASS PIC X(17) VALUE 'FraudMLOUTwrapper'.
 
        LINKAGE SECTION.
        01 DFHCOMMAREA.
@@ -18,8 +18,17 @@
            COPY MODELOUT.
 
        PROCEDURE DIVISION.
+            MOVE 2.814210  TO AMOUNT-NUM.
+            MOVE 1         TO CARD.
+            MOVE 0         TO ERRORSX.
+            MOVE 75        TO MCC.
+            MOVE 486       TO MERCHANTXCITY.
+            MOVE 25679     TO MERCHANTXNAME.
+            MOVE 64        TO MERCHANTXSTATE.
+            MOVE 2         TO USEXCHIP.
+            MOVE 1         TO USER. 
 
-            DISPLAY 'AMOUNT         :' AMOUNT.
+            DISPLAY 'AMOUNT         :' AMOUNT-NUM.
             DISPLAY 'MERCHANT CITY  :' MERCHANTXCITY.
             DISPLAY 'MERCHANT NAME  :' MERCHANTXNAME.
             DISPLAY 'MERCHANT STATE :' MERCHANTXSTATE.
@@ -51,8 +60,8 @@
       *   DISPLAY 'PREDICTION     :' PREDICTION.
       *   DISPLAY 'PROBABILITY    :'.
 
-            DISPLAY 'probabilityX0X :' probabilityX0X.
-            DISPLAY 'probabilityX1X :' probabilityX1X.
+            DISPLAY 'probabilityX0X :' PREDICTION.
+            DISPLAY 'probabilityX1X :' PROBABILITY(1).
       *   PERFORM UNTIL I=3
       *   DISPLAY 'PROBABILITY-' I
       *   DISPLAY PROBABILITY(I)
