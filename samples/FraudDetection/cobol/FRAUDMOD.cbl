@@ -50,6 +50,7 @@
                CHANNEL('CHAN')
                CHAR FROM(OUT_CLASS)
                END-EXEC.
+            DISPLAY MODELIN.
 
             EXEC CICS LINK PROGRAM('ALNSCORE') CHANNEL('CHAN')
                 END-EXEC.
