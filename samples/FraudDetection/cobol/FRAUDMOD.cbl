@@ -7,7 +7,7 @@
            03 MODELINP.
              06 Card                          COMP-2 SYNC.
              06 ErrorsX                       COMP-2 SYNC.
-             06 Amount-num                    COMP-2 SYNC.
+             06 Amount_num                    COMP-2 SYNC.
              06 UseXChip                      PIC S9(18) COMP-5 SYNC.
              06 MerchantXName                 PIC S9(18) COMP-5 SYNC.
              06 MCC                           PIC S9(18) COMP-5 SYNC.
@@ -33,7 +33,7 @@
       *     COPY MODELOUT.
 
        PROCEDURE DIVISION.
-            MOVE 2.814210  TO AMOUNT-NUM.
+            MOVE 2.814210  TO AMOUNT_NUM.
             MOVE 1         TO CARD.
             MOVE 0         TO ERRORSX.
             MOVE 75        TO MCC.
@@ -44,7 +44,7 @@
             MOVE 1         TO USER. 
             MOVE 99        TO ZIP.
 
-            DISPLAY 'AMOUNT         :' AMOUNT-NUM.
+            DISPLAY 'AMOUNT         :' AMOUNT_NUM.
             DISPLAY 'MERCHANT CITY  :' MERCHANTXCITY.
             DISPLAY 'MERCHANT NAME  :' MERCHANTXNAME.
             DISPLAY 'MERCHANT STATE :' MERCHANTXSTATE.
