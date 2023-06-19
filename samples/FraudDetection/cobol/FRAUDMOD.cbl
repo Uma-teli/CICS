@@ -27,12 +27,16 @@
             MOVE 64        TO MERCHANTXSTATE.
             MOVE 2         TO USEXCHIP.
             MOVE 1         TO USER. 
+            MOVE 99        TO ZIP.
 
             DISPLAY 'AMOUNT         :' AMOUNT-NUM.
             DISPLAY 'MERCHANT CITY  :' MERCHANTXCITY.
             DISPLAY 'MERCHANT NAME  :' MERCHANTXNAME.
             DISPLAY 'MERCHANT STATE :' MERCHANTXSTATE.
-            DISPLAY 'USER           :' USER.
+            DISPLAY 'card           :' CARD.
+            DISPLAY 'ERROSX           :' ERRORSX.
+            DISPLAY 'USEXCHIP           :' USEXCHIP.
+            DISPLAY 'MCC           :' MCC.
 
             EXEC CICS PUT CONTAINER('ALN_DEPLOY_ID') CHANNEL('CHAN')
                CHAR
