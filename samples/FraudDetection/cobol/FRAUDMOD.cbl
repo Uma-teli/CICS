@@ -18,16 +18,16 @@
            COPY MODELOUT.
 
        PROCEDURE DIVISION.
-            MOVE 2.814210  TO AMOUNT-NUM.
-            MOVE 1         TO CARD.
-            MOVE 0         TO ERRORSX.
-            MOVE 75        TO MCC.
-            MOVE 486       TO MERCHANTXCITY.
-            MOVE 25679     TO MERCHANTXNAME.
-            MOVE 64        TO MERCHANTXSTATE.
-            MOVE 2         TO USEXCHIP.
-            MOVE 1         TO USER. 
-            MOVE 99        TO ZIP.
+      *     MOVE 2.814210  TO AMOUNT-NUM.
+      *      MOVE 1         TO CARD.
+      *      MOVE 0         TO ERRORSX.
+      *      MOVE 75        TO MCC.
+      *      MOVE 486       TO MERCHANTXCITY.
+      *      MOVE 25679     TO MERCHANTXNAME.
+      *      MOVE 64        TO MERCHANTXSTATE.
+      *      MOVE 2         TO USEXCHIP.
+      *      MOVE 1         TO USER. 
+      *      MOVE 99        TO ZIP.
 
             DISPLAY 'AMOUNT         :' AMOUNT-NUM.
             DISPLAY 'MERCHANT CITY  :' MERCHANTXCITY.
