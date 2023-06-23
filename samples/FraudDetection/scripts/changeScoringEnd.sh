@@ -20,7 +20,7 @@ with open(filename, "r") as file:
     content = file.read()
 
 new_value="this should be populated"
-content = content.replace("old_value", new_value)
+content = content.replace(old_value, new_value)
 print(content)
 
 with open(filename, "w") as file:
