@@ -5,9 +5,9 @@
 
        01 I PIC 9(2) VALUE 1.
        01 MODEL_ID  PIC X(36) VALUE
-                    'this should be populated'.
+                    '72517bca-c869-4405-b9fa-cd6d7ad0bf54'.
        01 IN_CLASS  PIC X(16) VALUE 'FraudMLINwrapper'.
-       01 OUT_CLASS PIC X(17) VALUE 'FraudMLOUTwrapper'.
+       01 OUT_CLASS PIC X(16) VALUE 'FraudMLOTwrapper'.
 
        LINKAGE SECTION.
        01 DFHCOMMAREA.
@@ -65,11 +65,11 @@
       *   DISPLAY 'PROBABILITY    :'.
 
             DISPLAY 'probabilityX0X :' PREDICTION.
-            DISPLAY 'probabilityX1X :' PROBABILITY(1).
-      *   PERFORM UNTIL I=3
-      *   DISPLAY 'PROBABILITY-' I
-      *   DISPLAY PROBABILITY(I)
-      *   ADD 1 TO I
-      *   END-PERFORM.
+      *     DISPLAY 'probabilityX1X :' PROBABILITY(1).
+            PERFORM UNTIL I=3
+            DISPLAY 'PROBABILITY-' I
+            DISPLAY PROBABILITY(I)
+            ADD 1 TO I
+            END-PERFORM.
             EXEC CICS RETURN END-EXEC.
             STOP RUN.
