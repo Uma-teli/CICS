@@ -17,7 +17,7 @@
            COPY MODELOUT.
 
        PROCEDURE DIVISION.
-      *      MOVE 2.814210  TO AMOUNT_NUM.
+      *      MOVE 2.814210  TO AMOUNT.
       *      MOVE 1         TO CARD.
       *      MOVE 0         TO ERRORSX.
       *      MOVE 75        TO MCC.
@@ -28,14 +28,15 @@
       *      MOVE 1         TO USER. 
       *      MOVE 99        TO ZIP.
 
-            DISPLAY 'AMOUNT         :' AMOUNT-NUM.
+            DISPLAY 'AMOUNT         :' AMOUNT.
             DISPLAY 'MERCHANT CITY  :' MERCHANTXCITY.
             DISPLAY 'MERCHANT NAME  :' MERCHANTXNAME.
             DISPLAY 'MERCHANT STATE :' MERCHANTXSTATE.
-            DISPLAY 'card           :' CARD.
-            DISPLAY 'ERROSX           :' ERRORSX.
-            DISPLAY 'USEXCHIP           :' USEXCHIP.
-            DISPLAY 'MCC           :' MCC.
+            DISPLAY 'CARD           :' CARD.
+            DISPLAY 'ERROSX         :' ERRORSX.
+            DISPLAY 'USEXCHIP       :' USEXCHIP.
+            DISPLAY 'MCC            :' MCC.
+            DISPLAY 'ZIP            :' ZIP.
 
             EXEC CICS PUT CONTAINER('ALN_DEPLOY_ID') CHANNEL('CHAN')
                CHAR
