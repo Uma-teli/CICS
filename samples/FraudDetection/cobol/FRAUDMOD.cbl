@@ -64,6 +64,7 @@
 
       *   DISPLAY 'PREDICTION     :' PREDICTION.
       *   DISPLAY 'PROBABILITY    :'.
+            MOVE MODEl_ID TO RES_ID.
 
             DISPLAY 'probabilityX0X :' PREDICTION.
       *     DISPLAY 'probabilityX1X :' PROBABILITY(1).
