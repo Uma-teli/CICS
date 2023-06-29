@@ -10,10 +10,10 @@ with open(PREV_WORKSPACE + '/scoringURL.json') as f:
 
 SCORING_URL = data["scoring_url"]
 
-with open(WORKSPACE + '/samples/FraudDetection/scripts/extracted_data_model.json') as f:
-    data = json.load(f)
+with open(WORKSPACE + '/samples/FraudDetection/scripts/oldScoringURL.json') as f:
+    oldData = json.load(f)
 
-DEPLOY_ID = data["model_id"]
+DEPLOY_ID = oldData["model_id"]
 print(DEPLOY_ID)
 
 filename = WORKSPACE + "/samples/FraudDetection/cobol/FRAUDMOD.cbl"
@@ -30,3 +30,7 @@ with open(filename, "w") as file:
     file.write(content)
 
 print(file)
+
+with open(WORKSPACE + '/samples/FraudDetection/scripts/oldscoringURL.json','w') as f:
+    json.dump(data)
+
