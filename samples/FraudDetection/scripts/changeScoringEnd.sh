@@ -16,7 +16,7 @@ with open(WORKSPACE + '/samples/FraudDetection/scripts/extracted_data_model.json
 DEPLOY_ID = data["model_id"]
 print(DEPLOY_ID)
 
-filename = WORKSPACE + "/WMLzAppBuild/samples/FraudDetection/cobol/FRAUDMOD.cbl"
+filename = WORKSPACE + "/samples/FraudDetection/cobol/FRAUDMOD.cbl"
 new_value = SCORING_URL.split("/")[-1]
 old_value = DEPLOY_ID
 

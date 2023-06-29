@@ -1,6 +1,6 @@
 #!/bin/env sh
 
-cd ${WORKSPACE}
+cd /u/wml/jenkinsPipeline/WMLzAppBuild
 
 git add .
 

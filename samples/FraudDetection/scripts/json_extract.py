@@ -1,7 +1,7 @@
 import sys
 import json
 
-WORKSPACE = "/var/jenkins/workspaces/WMLzCobolPipeline"
+WORKSPACE = "/var/jenkins/workspace/WMLzCobolPipeline"
 with open(WORKSPACE +'/extracted_data.json', 'r') as f:
     data = json.load(f)
 

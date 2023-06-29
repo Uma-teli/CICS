@@ -18,7 +18,7 @@ header = {
 }
 
 model_version = int(sys.argv[1]) -1
-target_model_name = "Jenkins-deploy-v" + str(model_version)
+target_model_name = "Cobol-deploy-v" + str(model_version)
 
 response = requests.get('https://192.86.32.113:11442/v3/deployments', headers=header,verify=False)
 
