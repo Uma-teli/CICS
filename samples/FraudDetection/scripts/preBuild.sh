@@ -2,8 +2,8 @@
 
 MODEL_VERSION=$(python ${WORKSPACE}/scripts/json_extract.py model_version)
 
-${WORKSPACE}/samples/FraudDetection/scripts/extract.sh $MODEL_VERSION ${WORKSPACE} /var/jenkins/workspaces/WMLzCobolPipeline
+/u/wml/jenkinsPipeline/WMLzAppBuild/samples/FraudDetection/scripts/extract.sh $MODEL_VERSION /u/wml/jenkinsPipeline/WMLzAppBuild /var/jenkins/workspaces/WMLzCobolPipeline
 
-${WORKSPACE}/samples/FraudDetection/scripts/changeScoringEnd.sh ${WORKSPACE} /var/jenkins/workspaces/WMLzCobolPipeline
+/u/wml/jenkinsPipeline/WMLzAppBuild/samples/FraudDetection/scripts/changeScoringEnd.sh /u/wml/jenkinsPipeline/WMLzAppBuild /var/jenkins/workspaces/WMLzCobolPipeline
 
-${WORKSPACE}/samples/FraudDetection/scripts/gitCommit.sh ${WORKSPACE}
+/u/wml/jenkinsPipeline/WMLzAppBuild/samples/FraudDetection/scripts/gitCommit.sh /u/wml/jenkinsPipeline/WMLzAppBuild
