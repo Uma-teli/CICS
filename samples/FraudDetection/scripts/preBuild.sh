@@ -1,9 +1,9 @@
 #!/bin/env sh
 
-MODEL_VERSION=$(python /u/wml/jenkinsPipeline/json_extract.py model_version)
+MODEL_VERSION=$(python ${WORKSPACE}/scripts/json_extract.py model_version)
 
-/u/wml/jenkinsPipeline/WMLzAppBuild/samples/FraudDetection/scripts/extract.sh $MODEL_VERSION
+${WORKSPACE}/samples/FraudDetection/scripts/extract.sh $MODEL_VERSION ${WORKSPACE} /var/jenkins/workspaces/WMLzCobolPipeline
 
-/u/wml/jenkinsPipeline/WMLzAppBuild/samples/FraudDetection/scripts/changeScoringEnd.sh
+${WORKSPACE}/samples/FraudDetection/scripts/changeScoringEnd.sh ${WORKSPACE} /var/jenkins/workspaces/WMLzCobolPipeline
 
-/u/wml/jenkinsPipeline/WMLzAppBuild/samples/FraudDetection/scripts/gitCommit.sh
+${WORKSPACE}/samples/FraudDetection/scripts/gitCommit.sh ${WORKSPACE}

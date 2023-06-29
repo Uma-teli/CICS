@@ -3,7 +3,10 @@ import json
 import requests
 import sys
 
-with open('/u/wml/jenkinsPipeline/token.json') as f:
+WORKSPACE = sys.argv[2]
+PREV_WORKSPACE = sys.argv[3]
+
+with open(PREV_WORKSPACE + '/token.json') as f:
     data = json.load(f)
 
 token = data['token']
@@ -38,6 +41,6 @@ deploy_id = (json.loads(response.text)['resources'][Index]['metadata']['guid'])
 #extracted_val = {"artifact_version": artifact_version, "model_url": deployment_urls, "model_id": deploy_id, "model_name": target_model_name, "model_version": model_version}
 extracted_val = {"model_id": deploy_id}
 
-with open('/u/wml/jenkinsPipeline/WMLzAppBuild/samples/FraudDetection/scripts/extracted_data_model.json', 'w') as f:
+with open(WORKSPACE + '/samples/FraudDetection/scripts/extracted_data_model.json', 'w') as f:
     json.dump(extracted_val, f)
 

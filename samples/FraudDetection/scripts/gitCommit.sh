@@ -1,6 +1,6 @@
 #!/bin/env sh
 
-cd /u/wml/jenkinsPipeline/WMLzAppBuild/
+cd ${WORKSPACE}
 
 git add .
 
@@ -17,7 +17,7 @@ author=$(git config user.name)
 modified_files=$(git diff --name-only)
 
 # Generate commit message
-commit_message="${timestamp} - ${author} - Automatic Commit - ${branch}
+commit_message="${timestamp} - Automatic Commit - ${branch}
 
 Modified files:
 ${modified_files}"
