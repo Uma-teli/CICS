@@ -13,7 +13,7 @@ SCORING_URL = data["scoring_url"]
 with open(WORKSPACE + '/samples/FraudDetection/scripts/oldScoringURL.json') as f:
     oldData = json.load(f)
 
-DEPLOY_ID = oldData["model_id"]
+DEPLOY_ID = oldData["scoring_url"]
 print(DEPLOY_ID)
 
 filename = WORKSPACE + "/samples/FraudDetection/cobol/FRAUDMOD.cbl"
