@@ -32,5 +32,5 @@ with open(filename, "w") as file:
 print(file)
 
 with open(WORKSPACE + '/samples/FraudDetection/scripts/oldScoringURL.json','w') as f:
-    json.dumps(data)
+    json.dump(data,f)
 
