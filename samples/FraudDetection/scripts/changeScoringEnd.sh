@@ -9,19 +9,20 @@ with open(PREV_WORKSPACE + '/scoringURL.json') as f:
     data = json.load(f)
 
 SCORING_URL = data["scoring_url"]
-print("new:",SCORING_URL)
 
 with open(WORKSPACE + '/samples/FraudDetection/scripts/oldScoringURL.json') as f:
     oldData = json.load(f)
-print(oldData)
+
 DEPLOY_ID = oldData["scoring_url"]
 print(DEPLOY_ID)
 
 filename = WORKSPACE + "/samples/FraudDetection/cobol/FRAUDMOD.cbl"
 new_value = SCORING_URL.split("/")[-1]
-old_value = DEPLOY_ID
-print("old", old_value)
-print("new", new_value)
+old_value = DEPLOY_ID.split("/")[-1]
+
+print("Old scoring end point:",old_value)
+print("New scoring end point:",new_value)
+
 with open(filename, "r") as file:
     content = file.read()
 
