@@ -9,10 +9,11 @@ with open(PREV_WORKSPACE + '/scoringURL.json') as f:
     data = json.load(f)
 
 SCORING_URL = data["scoring_url"]
+print("new:",SCORING_URL)
 
 with open(WORKSPACE + '/samples/FraudDetection/scripts/oldScoringURL.json') as f:
     oldData = json.load(f)
-
+print(oldData)
 DEPLOY_ID = oldData["scoring_url"]
 print(DEPLOY_ID)
 
