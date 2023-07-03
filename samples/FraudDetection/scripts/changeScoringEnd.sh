@@ -20,7 +20,8 @@ print(DEPLOY_ID)
 filename = WORKSPACE + "/samples/FraudDetection/cobol/FRAUDMOD.cbl"
 new_value = SCORING_URL.split("/")[-1]
 old_value = DEPLOY_ID
-
+print("old", old_value)
+print("new", new_value)
 with open(filename, "r") as file:
     content = file.read()
 
