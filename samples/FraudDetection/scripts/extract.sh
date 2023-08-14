@@ -11,16 +11,22 @@ with open(PREV_WORKSPACE + '/token.json') as f:
 
 token = data['token']
 
+with open(PREV_WORKSPACE +'/extracted_userData.json') as f:
+    data = json.load(f)
+
+MainframeIP = data['MainframeIP']
+Username = data['username']
+
 header = {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + token,
-            'ML-Instance-Id' : 'ibmuser'
+            'ML-Instance-Id' : Username
 }
 
 model_version = int(sys.argv[1]) -1
 target_model_name = "Cobol-deploy-v" + str(model_version)
 
-response = requests.get('https://192.86.32.113:11442/v3/deployments', headers=header,verify=False)
+response = requests.get("https://" + MainframeIP + ":11442/v3/deployments", headers=header,verify=False)
 
 data = json.loads(response.text)
 
