@@ -6,12 +6,12 @@ import sys
 WORKSPACE = sys.argv[2]
 PREV_WORKSPACE = sys.argv[3]
 
-with open(PREV_WORKSPACE + '/token.json') as f:
+with open(PREV_WORKSPACE + '/converted_token.json') as f:
     data = json.load(f)
 
 token = data['token']
 
-with open(PREV_WORKSPACE +'/extracted_userData.json') as f:
+with open(PREV_WORKSPACE +'/converted_extracted_userData.json') as f:
     data = json.load(f)
 
 MainframeIP = data['MainframeIP']
