@@ -5,7 +5,7 @@ import sys
 WORKSPACE = sys.argv[1]
 PREV_WORKSPACE = sys.argv[2]
 
-with open(PREV_WORKSPACE + '/converted_scoringURL.json') as f:
+with open(PREV_WORKSPACE + '/scoringURL.json') as f:
     data = json.load(f)
 
 SCORING_URL = data["scoring_url"]
