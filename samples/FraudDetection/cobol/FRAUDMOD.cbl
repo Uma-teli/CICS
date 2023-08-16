@@ -5,7 +5,7 @@
 
        01 I PIC 9(2) VALUE 1.
        01 MODEL_ID  PIC X(36) VALUE
-                    '056d5305-1f57-4c73-bcec-35d7a7444d6b'.
+                    '159920de-71cc-49b0-930d-23f3a31c63b8'.
        01 IN_CLASS  PIC X(16) VALUE 'FraudMLINwrapper'.
        01 OUT_CLASS PIC X(16) VALUE 'FraudMLOTwrapper'.
 
