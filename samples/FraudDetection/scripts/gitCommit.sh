@@ -1,6 +1,6 @@
 #!/bin/env sh
 
-cd /u/wml/jenkinsPipeline/WMLzAppBuild
+cd $1
 
 git add .
 
@@ -25,4 +25,4 @@ ${modified_files}"
 git commit -m "$commit_message"
 
 GIT_SSH_COMMAND="ssh -i /u/wml/jenkinsPipeline/id_rsa"
-git push origin master 
+git push origin main 
