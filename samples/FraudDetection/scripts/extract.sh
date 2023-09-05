@@ -16,6 +16,7 @@ with open(PREV_WORKSPACE +'/extracted_userData.json') as f:
 
 MainframeIP = data['MainframeIP']
 Username = data['username']
+print("MainframeIP:",MainframeIP)
 
 header = {
             'Content-Type': 'application/json',
