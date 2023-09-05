@@ -34,7 +34,7 @@ with open(filename, "w") as file:
 
 print(file)
 
-data = []
+data = {}
 data["old_depID"] = new_value
 with open(WORKSPACE + '/samples/FraudDetection/scripts/oldScoringURL.json','w') as f:
     json.dump(data,f)
