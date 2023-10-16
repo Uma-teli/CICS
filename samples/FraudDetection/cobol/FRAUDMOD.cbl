@@ -5,7 +5,7 @@
 
        01 I PIC 9(2) VALUE 1.
        01 MODEL_ID  PIC X(36) VALUE
-                    'eb9acfa1-7af6-496e-a12b-dc6817ecc18e'.
+                    '61ee7f5f-59f7-437e-8bf4-03f0bbe6f4fc'.
        01 IN_CLASS  PIC X(16) VALUE 'FraudMLINwrapper'.
        01 OUT_CLASS PIC X(16) VALUE 'FraudMLOTwrapper'.
 
@@ -17,16 +17,6 @@
            COPY MODELOUT.
 
        PROCEDURE DIVISION.
-      *      MOVE 2.814210  TO AMOUNT.
-      *      MOVE 1         TO CARD.
-      *      MOVE 0         TO ERRORSX.
-      *      MOVE 75        TO MCC.
-      *      MOVE 486       TO MERCHANTXCITY.
-      *      MOVE 25679     TO MERCHANTXNAME.
-      *      MOVE 64        TO MERCHANTXSTATE.
-      *      MOVE 2         TO USEXCHIP.
-      *      MOVE 1         TO USER. 
-      *      MOVE 99        TO ZIP.
 
             DISPLAY 'AMOUNT         :' AMOUNT.
             DISPLAY 'MERCHANT CITY  :' MERCHANTXCITY.
