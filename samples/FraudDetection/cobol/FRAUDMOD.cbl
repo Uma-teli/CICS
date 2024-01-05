@@ -5,7 +5,7 @@
 
        01 I PIC 9(2) VALUE 1.
        01 MODEL_ID  PIC X(36) VALUE
-                    '5f5c6092-2189-467b-bcea-e6c884ddccc5'.
+                    'a8d8a977-aa14-4be0-b243-66aab979f73e'.
        01 IN_CLASS  PIC X(16) VALUE 'FraudMLINwrapper'.
        01 OUT_CLASS PIC X(16) VALUE 'FraudMLOTwrapper'.
 
@@ -54,14 +54,28 @@
 
       *   DISPLAY 'PREDICTION     :' PREDICTION.
       *   DISPLAY 'PROBABILITY    :'.
-            MOVE MODEl_ID TO RES_ID.
+      *      MOVE MODEl_ID TO RES_ID.
 
-            DISPLAY 'probabilityX0X :' PREDICTION.
+      *     DISPLAY 'probabilityX0X :' PREDICTION.
       *     DISPLAY 'probabilityX1X :' PROBABILITY(1).
-            PERFORM UNTIL I=3
-            DISPLAY 'PROBABILITY-' I
-            DISPLAY PROBABILITY(I)
-            ADD 1 TO I
-            END-PERFORM.
+      *      PERFORM UNTIL I=3
+      *      DISPLAY 'PROBABILITY-' I
+      *      DISPLAY PROBABILITY(I)
+      *      ADD 1 TO I
+      *      END-PERFORM.
+            IF SCORE-RC > 0 THEN 
+               DISPLAY "Scoring failed with return code:" SCORE-RC                  
+               DISPLAY "Scoring error message ID: " SCORE-ERR-ID                                      
+               DISPLAY "Scoring error message content: " SCORE-ERR-MSG                               
+            ELSE 
+               DISPLAY 'PREDICTION     :' PREDICTION 
+               DISPLAY 'PROBABILITY    :' 
+               PERFORM UNTIL I=3  
+               DISPLAY 'PROBABILITY-' I  
+               DISPLAY probability(I)  
+               ADD 1 TO I  
+               END-PERFORM. 
+            END-IF 
+
             EXEC CICS RETURN END-EXEC.
             STOP RUN.
