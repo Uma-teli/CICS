@@ -5,7 +5,7 @@
 
        01 I PIC 9(2) VALUE 1.
        01 MODEL_ID  PIC X(36) VALUE
-                    'a8d8a977-aa14-4be0-b243-66aab979f73e'.
+                    'b2f273c1-eb39-464c-b5fd-9ff701361d81'.
        01 IN_CLASS  PIC X(16) VALUE 'FraudMLINwrapper'.
        01 OUT_CLASS PIC X(16) VALUE 'FraudMLOTwrapper'.
 
@@ -64,9 +64,12 @@
       *      ADD 1 TO I
       *      END-PERFORM.
             IF SCORE-RC > 0 THEN 
-               DISPLAY "Scoring failed with return code:" SCORE-RC                  
-               DISPLAY "Scoring error message ID: " SCORE-ERR-ID                                      
-               DISPLAY "Scoring error message content: " SCORE-ERR-MSG                               
+               DISPLAY "Scoring failed with return code:" 
+                        SCORE-RC                  
+               DISPLAY "Scoring error message ID: " 
+                        SCORE-ERR-ID                                      
+               DISPLAY "Scoring error message content: " 
+                        SCORE-ERR-MSG                               
             ELSE 
                DISPLAY 'PREDICTION     :' PREDICTION 
                DISPLAY 'PROBABILITY    :' 
