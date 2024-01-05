@@ -5,7 +5,7 @@
 
        01 I PIC 9(2) VALUE 1.
        01 MODEL_ID  PIC X(36) VALUE
-                    'b2f273c1-eb39-464c-b5fd-9ff701361d81'.
+                    '7c60e3f3-eee5-49b3-b3cc-55f1888a4c11'.
        01 IN_CLASS  PIC X(16) VALUE 'FraudMLINwrapper'.
        01 OUT_CLASS PIC X(16) VALUE 'FraudMLOTwrapper'.
 
@@ -77,8 +77,8 @@
                DISPLAY 'PROBABILITY-' I  
                DISPLAY probability(I)  
                ADD 1 TO I  
-               END-PERFORM. 
-            END-IF 
+               END-PERFORM 
+            END-IF. 
 
             EXEC CICS RETURN END-EXEC.
             STOP RUN.
