@@ -84,7 +84,7 @@
                DISPLAY "Scoring error message content: " 
                         SCORE-ERR-MSG                               
             ELSE 
-               MOVE MODELOUT TO MODELOUP.
+               MOVE MODELOUT TO MODELOUP
          
                DISPLAY 'PREDICTION     :' PREDICTION 
                DISPLAY 'PROBABILITY    :' 
