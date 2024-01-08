@@ -63,6 +63,8 @@
       *      DISPLAY PROBABILITY(I)
       *      ADD 1 TO I
       *      END-PERFORM.
+            DISPLAY "RC =" SCORE-RC.
+            DISPLAY FRADMLOT.
             MOVE MODEL_ID TO RES_ID.
             IF SCORE-RC > 0 THEN 
                DISPLAY "Scoring failed with return code:" 
