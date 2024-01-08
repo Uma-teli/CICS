@@ -15,8 +15,8 @@
          03 SCORE-ERR-MSG                 PIC X(255).
          03 SCORE-ERR-MSG-LEN             PIC S9999 COMP-5 SYNC.
          03 MODELOUT.
-             06 probability OCCURS 2          COMP-2 SYNC.
-             06 prediction                    COMP-2 SYNC.
+             06 prob OCCURS 2          COMP-2 SYNC.
+             06 pred                    COMP-2 SYNC.
 
        LINKAGE SECTION.
        01 DFHCOMMAREA.
