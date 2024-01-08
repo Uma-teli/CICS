@@ -9,6 +9,15 @@
        01 IN_CLASS  PIC X(16) VALUE 'FraudMLInWrapper'.
        01 OUT_CLASS PIC X(17) VALUE 'FraudMLOutWrapper'.
 
+       01 COUTPUT.
+         03 SCORE-RC                   PIC 9(4) COMP VALUE 0.
+         03 SCORE-ERR-ID                  PIC X(8).
+         03 SCORE-ERR-MSG                 PIC X(255).
+         03 SCORE-ERR-MSG-LEN             PIC S9999 COMP-5 SYNC.
+         03 MODELOUT.
+             06 probability OCCURS 2          COMP-2 SYNC.
+             06 prediction                    COMP-2 SYNC.
+
        LINKAGE SECTION.
        01 DFHCOMMAREA.
            02 FRADMLIN.
@@ -50,7 +59,7 @@
                 END-EXEC.
             EXEC CICS GET CONTAINER('ALN_OUTPUT_DATA')
                 CHANNEL('CHAN')
-                INTO(FRADMLOT) END-EXEC.
+                INTO(COUTPUT) END-EXEC.
 
       *   DISPLAY 'PREDICTION     :' PREDICTION.
       *   DISPLAY 'PROBABILITY    :'.
@@ -64,7 +73,8 @@
       *      ADD 1 TO I
       *      END-PERFORM.
             DISPLAY "RC =" SCORE-RC.
-            DISPLAY FRADMLOT.
+
+     
             MOVE MODEL_ID TO RES_ID.
             IF SCORE-RC > 0 THEN 
                DISPLAY "Scoring failed with return code:" 
@@ -74,6 +84,8 @@
                DISPLAY "Scoring error message content: " 
                         SCORE-ERR-MSG                               
             ELSE 
+               MOVE MODELOUT TO MODELOUP.
+         
                DISPLAY 'PREDICTION     :' PREDICTION 
                DISPLAY 'PROBABILITY    :' 
                PERFORM UNTIL I=3  
