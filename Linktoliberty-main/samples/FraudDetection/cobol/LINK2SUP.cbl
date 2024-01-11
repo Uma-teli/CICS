@@ -1,4 +1,4 @@
-       PROCESS NODYNAM,RENT,APOST,TRUNC(OPT)
+       PROCESS NODYNAM,RENT,APOST,APAR,TRUNC(OPT)
 
       *****************************************************************
       * Licensed Materials - Property of IBM
