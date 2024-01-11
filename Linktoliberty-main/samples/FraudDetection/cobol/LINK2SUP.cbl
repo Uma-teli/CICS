@@ -37,7 +37,7 @@
        COPY STOKPART.
       *
       *    SUPPLIER copybook
-       03 WS-SUPPLIER.
+       01 WS-SUPPLIER.
        COPY SUPPLIER.
 
       *
