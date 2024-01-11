@@ -163,7 +163,7 @@
       *    Copy fields from container structure to output message.
            MOVE SUPPLIER-ID IN WS-SUPPLIER TO RESP-SUPPLIER-ID.
            MOVE SUPPLIER-NAME IN WS-SUPPLIER TO RESP-SUPPLIER-NAME.
-      *     DISPLAY 'Welcome to SimoTime...' RESP-NAME.
+
 
       *    Send the complete response message to the terminal.
            EXEC CICS SEND TEXT FROM(RESPONSE-MESSAGE)
