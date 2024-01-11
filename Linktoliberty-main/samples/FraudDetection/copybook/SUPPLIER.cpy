@@ -10,6 +10,6 @@
       * IBM Corp.
       *
       *****************************************************************
-       01  SUPPLIER.
-           03   SUPPLIER-ID             PIC 9(8) DISPLAY.
-           03   SUPPLIER-NAME           PIC X(40).
+       03  SUPPLIER.
+           06   SUPPLIER-ID             PIC 9(8) DISPLAY.
+           06   SUPPLIER-NAME           PIC X(40).
