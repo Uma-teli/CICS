@@ -12,7 +12,7 @@
       *****************************************************************
        01  STOCK-PART.
            03   PART-ID                 PIC 9(8) DISPLAY.
-           03  SUPPLIER                 PIC 9(8) DISPLAY.
+           03   SUPPLIER                PIC 9(8) DISPLAY.
            03   UNIT-PRICE              PIC 99999V99 PACKED-DECIMAL.
            03   LAST-ORDER-DATE.
                 05  LAST-ORDER-DATE-YY  PIC X(2).
