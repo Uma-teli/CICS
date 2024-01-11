@@ -33,12 +33,15 @@
        WORKING-STORAGE SECTION.
       *
       *    STOCK-PART copybook
-       01 WS-STOCK-PART.
-       COPY STOKPART.
+           COPY STOKPART REPLACING STOCK-PART BY WS-STOCK-PART.
+      * 01 WS-STOCK-PART.
+      * COPY STOKPART.
       *
       *    SUPPLIER copybook
-       01 WS-SUPPLIER.
-       COPY SUPPLIER.
+           COPY SUPPLIER REPLACING SUPPLIER BY WS-SUPPLIER.
+
+      * 01 WS-SUPPLIER.
+      * COPY SUPPLIER.
 
       *
       *    Working storage definitions
